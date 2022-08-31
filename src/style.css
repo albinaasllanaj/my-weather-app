@@ -7,7 +7,8 @@ li {
   color: #70757a;
 }
 h1 {
-  color: #202124;
+  color: #70757a;
+  margin: 0;
 }
 
 .weather-app {
@@ -16,6 +17,7 @@ h1 {
   margin: 20px auto;
   max-width: 600px;
   border-radius: 10px;
+  color: #70757a;
 }
 
 .weather-icon {
@@ -26,8 +28,9 @@ h1 {
 
 .temperature {
   font-size: 64px;
-  font-weight: 400;
+  font-weight: 50;
   line-height: 1;
+  color: #70757a;
 }
 
 .units {
