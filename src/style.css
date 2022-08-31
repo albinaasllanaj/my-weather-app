@@ -20,10 +20,20 @@ h1 {
   color: #70757a;
 }
 
+h3 {
+  color: grey;
+  display: block;
+  margin: 20px auto;
+  font-weight: 100;
+  font-size: 15px;
+  text-align: center;
+}
+
 .weather-icon {
   height: 64px;
   width: 64px;
   margin-right: 10px;
+  line-height: 1;
 }
 
 .temperature {
@@ -38,11 +48,9 @@ h1 {
   top: -32px;
 }
 
-h3 {
-  color: grey;
-  display: block;
-  margin: 20px auto;
-  font-weight: 100;
-  font-size: 15px;
-  text-align: center;
+.weather-temperature img {
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+  line-height: 1;
 }
