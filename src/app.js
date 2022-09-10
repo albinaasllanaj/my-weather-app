@@ -26,6 +26,40 @@ let months = [
 let today = document.querySelector("#todays-date");
 today.innerHTML = `${day}, ${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class=row>`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  
+    <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+
+      <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" width="42"/>
+      
+      <div class="weather-forecast-temp">
+      <span class="weather-forecast-temp-max">18°</span>
+      <span class="weather-forecast-temp-min">12°</span>
+        
+      </div>
+      
+    </div>
+
+ 
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+}
 function displayWeather(response) {
   console.log(response);
   console.log(response.data.name);
@@ -44,6 +78,8 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -62,3 +98,4 @@ let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 
 search("New York");
+displayForecast();
